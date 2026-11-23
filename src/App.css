@@ -1,0 +1,22 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Main content */
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+}
+
+/* Accessibility: visible keyboard focus */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #6366f1;
+  outline-offset: 3px;
+}

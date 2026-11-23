@@ -1,0 +1,25 @@
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Empty task message */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  background: #ffffff;
+  border: 1px dashed #dcdce8;
+  border-radius: 12px;
+}
+
+.empty-state h3 {
+  color: #33334d;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: #77778a;
+  font-size: 14px;
+}

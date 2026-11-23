@@ -1,0 +1,283 @@
+
+/* Modal overlay - blur the dashboard background */
+.create-task-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(237, 236, 248, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  overflow-y: auto;
+}
+
+/* White form modal */
+.create-task-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  box-sizing: border-box;
+  box-shadow: 0 12px 35px rgba(30, 35, 80, 0.15);
+}
+
+/* Header */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #eef0f5;
+}
+
+.form-header h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #19243e;
+}
+
+.form-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #71809a;
+  line-height: 1.5;
+}
+
+/* Close button */
+.close-form-btn {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+  background: #f3f4fa;
+  color: #71809a;
+
+  cursor: pointer;
+}
+
+.close-form-btn:hover {
+  background: #e8e9f3;
+}
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+  min-width: 0;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #26334d;
+}
+
+.form-group label span {
+  color: #6655f5;
+}
+
+/* Inputs, textarea and dropdowns */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #26334d;
+
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input,
+.form-group select {
+  height: 44px;
+}
+
+.form-group textarea {
+  height: 85px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9aa5b8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #6655f5;
+  box-shadow: 0 0 0 2px rgba(102, 85, 245, 0.08);
+}
+
+/* Status and Priority side by side */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Due date */
+.date-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 44px;
+  padding: 0 12px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  color: #8792aa;
+}
+
+.date-input-wrapper:focus-within {
+  border-color: #6655f5;
+}
+
+.date-input-wrapper input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.date-input-wrapper input:focus {
+  border: none;
+  box-shadow: none;
+}
+
+/* Required field note */
+.required-note {
+  margin: -3px 0 20px;
+  font-size: 13px;
+  color: #8792aa;
+}
+
+/* Validation message */
+.error-message {
+  color: #dc2626;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Bottom buttons */
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+
+  padding-top: 18px;
+  border-top: 1px solid #eef0f5;
+}
+
+.cancel-btn,
+.save-task-btn {
+  min-width: 110px;
+  height: 42px;
+  padding: 0 18px;
+
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #26334d;
+}
+
+.cancel-btn:hover {
+  background: #f8f8fc;
+}
+
+.save-task-btn {
+  background: #6655f5;
+  border: 1px solid #6655f5;
+  color: #ffffff;
+}
+
+.save-task-btn:hover {
+  background: #5140dc;
+}
+
+/* Keyboard accessibility */
+.create-task-form button:focus-visible {
+  outline: 2px solid #6655f5;
+  outline-offset: 3px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .create-task-overlay {
+    padding: 14px;
+  }
+
+  .create-task-form {
+    padding: 23px 20px;
+  }
+
+  .form-header h2 {
+    font-size: 21px;
+  }
+
+  .form-row {
+    gap: 10px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 14px;
+  }
+
+  .cancel-btn,
+  .save-task-btn {
+    min-width: 95px;
+  }
+}

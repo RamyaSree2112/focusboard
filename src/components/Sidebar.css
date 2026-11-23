@@ -1,0 +1,141 @@
+/* Sidebar Layout */
+
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #eeeeF5;
+  padding: 28px 18px;
+}
+
+/* Sidebar Header */
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #252943;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navigation */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 9px;
+  color: #777b94;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.nav-item:hover {
+  background: #f5f3ff;
+}
+
+.nav-item.active {
+  background: #f0edff;
+  color: #6855f5;
+}
+
+/* Tablet and Mobile */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 16px 20px;
+    border-right: none;
+    border-bottom: 1px solid #eeeeF5;
+  }
+
+  .sidebar-header {
+    margin-bottom: 15px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-item {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-nav {
+    gap: 5px;
+  }
+
+  .nav-item {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .nav-item svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 16px 20px;
+    border-right: none;
+    border-bottom: 1px solid #eeeeF5;
+  }
+
+  .sidebar-header {
+    margin-bottom: 15px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .sidebar-nav {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sidebar-nav.open {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 10px;
+  }
+}

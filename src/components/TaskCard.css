@@ -1,0 +1,234 @@
+
+/* Main task card */
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+
+  background: #ffffff;
+  border: 1px solid #eeeeF5;
+  border-radius: 14px;
+
+  transition: box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Left section: status icon, title and description */
+.task-card-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  flex: 1;
+  min-width: 180px;
+}
+
+.task-status-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+
+  border-radius: 9px;
+}
+
+/* Status icon colors */
+.task-status-icon.completed {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.task-status-icon.in-progress {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.task-status-icon.to-do {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* Title and description */
+.task-card-text {
+  min-width: 0;
+}
+
+.task-title {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #252943;
+}
+
+.task-description {
+  margin: 0;
+
+  font-size: 13px;
+  color: #85899f;
+  line-height: 1.5;
+}
+
+/* Middle section: category, priority and date */
+.task-card-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Category */
+.category-badge {
+  padding: 6px 10px;
+  border-radius: 7px;
+
+  background: #f0edff;
+  color: #6855f5;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Priority */
+.priority-badge {
+  padding: 6px 11px;
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.priority-badge.high {
+  background: #ffe8e8;
+  color: #e34b4b;
+}
+
+.priority-badge.medium {
+  background: #fff2d9;
+  color: #c58a16;
+}
+
+.priority-badge.low {
+  background: #e5f8ed;
+  color: #24965a;
+}
+
+/* Due date */
+.due-date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #85899f;
+  font-size: 13px;
+}
+
+/* Right section: action icons */
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.task-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+  padding: 0;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* View */
+.view-btn {
+  color: #64748b;
+}
+
+.view-btn:hover {
+  background: #f1f5f9;
+}
+
+/* Edit */
+.edit-btn {
+  color: #2563eb;
+}
+
+.edit-btn:hover {
+  background: #eff6ff;
+}
+
+/* Delete */
+.delete-btn {
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #fef2f2;
+}
+
+/* Keyboard accessibility */
+.task-action-btn:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .task-card {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .task-card-details {
+    gap: 8px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .task-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .task-card-left {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .task-card-details {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    white-space: normal;
+  }
+
+  .task-actions {
+    margin-left: auto;
+  }
+}

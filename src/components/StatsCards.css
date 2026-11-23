@@ -1,0 +1,32 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #eeeeF5;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.stat-card svg {
+  width: 24px;
+  height: 24px;
+  color: #6855f5;
+  margin-bottom: 15px;
+}
+
+.stat-card p {
+  color: #85899f;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.stat-card h2 {
+  color: #252943;
+  font-size: 26px;
+  font-weight: 700;
+}

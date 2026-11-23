@@ -1,0 +1,155 @@
+
+/* Blurred dashboard background */
+.task-details-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(237, 236, 248, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Popup */
+.task-details-modal {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 45px rgba(30, 35, 70, 0.16);
+  box-sizing: border-box;
+}
+
+/* Header */
+.task-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eeeeF5;
+}
+
+.task-details-header h2 {
+  margin: 0;
+  color: #252943;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.task-details-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.task-details-close:hover {
+  background: #e2e8f0;
+}
+
+/* Content */
+.task-details-content {
+  padding: 22px 0;
+}
+
+.task-details-content h3 {
+  margin: 0 0 10px;
+  color: #252943;
+  font-size: 19px;
+}
+
+.task-details-description {
+  margin: 0 0 22px;
+  color: #85899f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Information rows */
+.task-details-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 13px 0;
+  border-bottom: 1px solid #f1f1f5;
+
+  color: #64748b;
+}
+
+.task-details-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-details-item span {
+  color: #85899f;
+  font-size: 12px;
+}
+
+.task-details-item strong {
+  color: #252943;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Status indicator */
+.details-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4f46e5;
+}
+
+/* Footer */
+.task-details-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.task-details-footer button {
+  padding: 10px 22px;
+
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.task-details-footer button:hover {
+  background: #4338ca;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .task-details-modal {
+    padding: 20px;
+  }
+
+  .task-details-header h2 {
+    font-size: 18px;
+  }
+}
