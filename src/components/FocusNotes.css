@@ -13,7 +13,6 @@
   border-radius: 14px;
   background: linear-gradient(110deg, #6855f5, #5140d9);
   color: #ffffff;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -177,7 +176,7 @@
   transform: scale(1.08);
 }
 
-/* Tablet and mobile */
+/* Tablet */
 @media (max-width: 768px) {
   .focus-note-content {
     padding: 20px;
@@ -193,23 +192,58 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile */
+@media (max-width: 600px) {
+  .focus-notes {
+    margin: 18px 0;
+  }
+
   .focus-note-content {
-    min-height: 190px;
-    padding: 18px;
+    min-height: 0;
+    padding: 17px;
     flex-direction: column;
     align-items: stretch;
+    gap: 16px;
+  }
+
+  .focus-note-label {
+    gap: 14px;
+    margin-bottom: 8px;
+    font-size: 9px;
   }
 
   .focus-note-left h2 {
-    font-size: 19px;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .focus-note-left p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .focus-progress {
+    margin-top: 12px;
   }
 
   .focus-note-right {
     justify-content: space-between;
+    gap: 10px;
   }
 
   .next-task-card {
-    width: 175px;
+    width: min(190px, 65%);
+    min-height: 70px;
+    padding: 11px;
+  }
+
+  .carousel-buttons {
+    gap: 7px;
+  }
+
+  .carousel-buttons button {
+    width: 30px;
+    height: 30px;
+    font-size: 21px;
   }
 }

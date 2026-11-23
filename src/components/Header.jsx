@@ -6,11 +6,33 @@ function Header({ onNewTask }) {
   return (
     <header className="header">
 
-      <div className="welcome">
-        <h2>Good morning!</h2>
-        <p>Here's what's happening with your tasks today.</p>
+      {/* Mobile top bar */}
+      <div className="mobile-topbar">
+        <h2 className="mobile-logo">FocusBoard</h2>
+
+        <div className="mobile-profile">
+          R
+        </div>
       </div>
 
+      {/* Welcome section */}
+      <div className="welcome">
+        <h2 className="desktop-welcome">Good morning!</h2>
+
+        <h2 className="mobile-welcome">
+          Your work, in focus.
+        </h2>
+
+        <p className="desktop-description">
+          Here's what's happening with your tasks today.
+        </p>
+
+        <p className="mobile-description">
+          Stay organized and keep moving forward.
+        </p>
+      </div>
+
+      {/* Desktop header actions */}
       <div className="header-actions">
 
         <button

@@ -3,10 +3,14 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  min-width: 0;
 }
 
 /* Empty task message */
 .empty-state {
+  width: 100%;
+  box-sizing: border-box;
   text-align: center;
   padding: 40px 20px;
   background: #ffffff;
@@ -17,9 +21,30 @@
 .empty-state h3 {
   color: #33334d;
   margin-bottom: 8px;
+  font-size: 17px;
 }
 
 .empty-state p {
   color: #77778a;
   font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .task-list {
+    gap: 12px;
+  }
+
+  .empty-state {
+    padding: 30px 15px;
+  }
+
+  .empty-state h3 {
+    font-size: 15px;
+  }
+
+  .empty-state p {
+    font-size: 12px;
+  }
 }

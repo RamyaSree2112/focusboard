@@ -1,34 +1,30 @@
 
-/* Modal overlay - blur the dashboard background */
+/* Modal overlay */
 .create-task-overlay {
   position: fixed;
   inset: 0;
   z-index: 1000;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 20px;
   box-sizing: border-box;
-
   background: rgba(237, 236, 248, 0.35);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-
   overflow-y: auto;
 }
 
-/* White form modal */
+/* Form modal */
 .create-task-form {
   width: 100%;
   max-width: 500px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
   padding: 30px;
-
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
-
   box-sizing: border-box;
   box-shadow: 0 12px 35px rgba(30, 35, 80, 0.15);
 }
@@ -39,7 +35,6 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 12px;
-
   padding-bottom: 20px;
   margin-bottom: 22px;
   border-bottom: 1px solid #eef0f5;
@@ -64,16 +59,13 @@
   width: 32px;
   height: 32px;
   flex-shrink: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: none;
   border-radius: 50%;
   background: #f3f4fa;
   color: #71809a;
-
   cursor: pointer;
 }
 
@@ -107,15 +99,11 @@
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
-
   padding: 12px 14px;
-
   border: 1px solid #e2e8f0;
   border-radius: 9px;
-
   background: #ffffff;
   color: #26334d;
-
   font-family: inherit;
   font-size: 14px;
   outline: none;
@@ -143,7 +131,7 @@
   box-shadow: 0 0 0 2px rgba(102, 85, 245, 0.08);
 }
 
-/* Status and Priority side by side */
+/* Status and Priority */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -155,10 +143,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-
   height: 44px;
   padding: 0 12px;
-
   border: 1px solid #e2e8f0;
   border-radius: 9px;
   color: #8792aa;
@@ -173,7 +159,6 @@
   min-width: 0;
   height: 100%;
   padding: 0;
-
   border: none;
   outline: none;
   box-shadow: none;
@@ -184,7 +169,7 @@
   box-shadow: none;
 }
 
-/* Required field note */
+/* Required note */
 .required-note {
   margin: -3px 0 20px;
   font-size: 13px;
@@ -204,7 +189,6 @@
   justify-content: flex-end;
   align-items: center;
   gap: 12px;
-
   padding-top: 18px;
   border-top: 1px solid #eef0f5;
 }
@@ -214,7 +198,6 @@
   min-width: 110px;
   height: 42px;
   padding: 0 18px;
-
   border-radius: 9px;
   font-family: inherit;
   font-size: 14px;
@@ -248,36 +231,75 @@
   outline-offset: 3px;
 }
 
-/* Mobile */
-@media (max-width: 480px) {
+/* Tablet and mobile */
+@media (max-width: 600px) {
   .create-task-overlay {
-    padding: 14px;
+    align-items: flex-start;
+    padding: 12px;
   }
 
   .create-task-form {
-    padding: 23px 20px;
+    max-height: calc(100vh - 24px);
+    padding: 22px 18px;
+    border-radius: 14px;
+    margin: auto 0;
+  }
+
+  .form-header {
+    padding-bottom: 15px;
+    margin-bottom: 18px;
   }
 
   .form-header h2 {
     font-size: 21px;
   }
 
-  .form-row {
-    gap: 10px;
+  .form-header p {
+    font-size: 12px;
+  }
+
+  .form-group {
+    gap: 7px;
+    margin-bottom: 16px;
   }
 
   .form-group label {
     font-size: 13px;
   }
 
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
   .form-group input,
   .form-group textarea,
   .form-group select {
-    font-size: 14px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .form-footer {
+    gap: 8px;
   }
 
   .cancel-btn,
   .save-task-btn {
-    min-width: 95px;
+    flex: 1;
+    min-width: 0;
+    height: 42px;
+    padding: 0 10px;
+  }
+}
+
+/* Very narrow screens */
+@media (max-width: 360px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .create-task-form {
+    padding: 18px 14px;
   }
 }

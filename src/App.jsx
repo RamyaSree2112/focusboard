@@ -167,6 +167,7 @@ function App() {
                     tasks={tasks}
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
+                    onNewTask={openCreateForm}
                   />
 
                   <TaskList

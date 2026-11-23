@@ -1,5 +1,5 @@
 
-import { Search } from "lucide-react";
+import { Search, Plus } from "lucide-react";
 import "./TaskFilters.css";
 
 function TaskFilters({
@@ -10,32 +10,65 @@ function TaskFilters({
   tasks,
   searchTerm,
   setSearchTerm,
+  onNewTask,
 }) {
   return (
     <div className="task-filters">
 
-      {/* First row: My Tasks heading and Priority dropdown */}
+      {/* Heading and New Task button */}
       <div className="task-filters-header">
         <h2>My Tasks</h2>
 
-        <select
-          className="priority-filter"
-          aria-label="Filter tasks by priority"
-          value={selectedPriority}
-          onChange={(event) => setSelectedPriority(event.target.value)}
-        >
-          <option value="All Priorities">All Priorities</option>
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
-        </select>
+        <div className="task-filter-actions">
+          <select
+            className="priority-filter"
+            aria-label="Filter tasks by priority"
+            value={selectedPriority}
+            onChange={(event) =>
+              setSelectedPriority(event.target.value)
+            }
+          >
+            <option value="All Priorities">All Priorities</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+
+          <button
+            type="button"
+            className="mobile-add-task"
+            onClick={onNewTask}
+            aria-label="Create new task"
+            title="Create new task"
+          >
+            <Plus size={21} />
+          </button>
+        </div>
       </div>
 
-      {/* Second row: Status buttons and Search */}
+      {/* Search */}
+      <div className="task-search-row">
+        <div className="search-box">
+          <Search size={18} />
+
+          <input
+            type="text"
+            placeholder="Search tasks..."
+            aria-label="Search tasks"
+            value={searchTerm}
+            onChange={(event) =>
+              setSearchTerm(event.target.value)
+            }
+          />
+        </div>
+      </div>
+
+      {/* Status filters */}
       <div className="task-filters-bottom">
-
-        <div className="status-filters" aria-label="Filter tasks by status">
-
+        <div
+          className="status-filters"
+          aria-label="Filter tasks by status"
+        >
           <button
             type="button"
             className={`filter-btn ${selectedStatus === "All Tasks" ? "active" : ""}`}
@@ -71,21 +104,7 @@ function TaskFilters({
           >
             Completed
           </button>
-
         </div>
-
-        <div className="search-box">
-          <Search size={18} />
-
-          <input
-            type="text"
-            placeholder="Search tasks..."
-            aria-label="Search tasks"
-            value={searchTerm}
-            onChange={(event) => setSearchTerm(event.target.value)}
-          />
-        </div>
-
       </div>
 
     </div>
