@@ -1,16 +1,62 @@
-# React + Vite
+# FocusBoard – Task Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FocusBoard is a responsive task management dashboard built with React.js. It helps users organize tasks, track progress, and stay focused.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Dashboard with task statistics
+- Create, view, edit, and delete tasks
+- Filter tasks by status and priority
+- Search tasks
+- Focus Notes carousel
+- Responsive mobile, tablet, and desktop layouts
+- Task data saved using browser Local Storage
+- Empty state when no tasks are available
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- JavaScript
+- CSS3
+- Vite
+- Lucide React
+- Browser Local Storage
 
-## Expanding the ESLint configuration
+## Installation and Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/RamyaSree2112/focusboard.git
+   ```
+
+2. Open the project folder:
+
+   ```bash
+   cd focusboard
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL shown in the terminal.
+
+## Responsive Design
+
+The application supports:
+- Mobile devices
+- Tablets
+- Desktop screens
+
+## GitHub Repository
+
+https://github.com/RamyaSree2112/focusboard
